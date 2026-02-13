@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Алиханчик</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: rgb(240, 190, 237);
+        }
+        #container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 10px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 0 10px;
+            cursor: pointer;
+            background-color: rgb(239, 139, 196);
+            color: rgb(27, 11, 24); /* Белый цвет текста кнопок */
+            border: none; /* Убираем границу */
+            border-radius: 5px; /* Закругляем углы */
+        }
+        button.clicked {
+            background-color: rgb(36, 25, 29);
+        }
+        #response {
+            display: none;
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        #valentine-image {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Мой сладкий мальчик</h1>
+        <p>Будешь моей валентинкой?</p>
+        <img src="https://i.pinimg.com/736x/2d/e2/3d/2de23d93d78734d813252bfed8d4ba9e.jpg" alt="Cute Picture">
+        <div class="buttons">
+             <button onclick="showResponse('yes')">Yes</button>
+            <button onclick="moveButton()">No</button>
+        </div>
+        <div id="response"></div>
+    </div>
+
+    <div id="valentine-image">
+    <img src="https://i.pinimg.com/736x/4c/20/79/4c2079d147547a9fc67b9b6e392d9b6c.jpg" alt="Valentine Image">
+    <div>
+Мой мальчик, с первым праздником влюблённых ❤️
+
+Столько всего хочется сказать, но самое важное — спасибо тебе за то, что ты рядом. Ты моя опора, моя поддержка и моя любовь. С тобой я чувствую себя спокойно и в безопасности. И знай, на меня ты тоже можешь рассчитывать в любой момент. Мне так ценно это чувство уверенности, которое ты мне даёшь, твоё тепло и то, какой ты настоящий.
+
+Ты даже не представляешь, а может, и представляешь, как сильно я тебя люблю и ценю. Иногда мне кажется, что внутри слишком много чувств для одного сердца.
+
+Время с тобой пролетает как один миг. И хоть немного грустно, что часы рядом с тобой летят так быстро, это значит только одно — ты мой человек. Тот, с кем легко, уютно и по-настоящему хорошо.
+
+Лежать рядом, обнимать тебя, целовать — это мой абсолютный комфорт, моё спокойствие и счастье.
+
+Осылай осылай әр жыл сайын бірге атап өтейік әр мейрамды. Қатты-қатты жақсы көрем сені, жаным 🫶🏻
+-
+
+-
+
+          Алихан, жаным сені сүйеді🩷</div>
+</div>
+    <script>
+        function showResponse(answer) {
+            if (answer === 'yes') {
+                document.getElementById('container').style.display = 'none';
+                document.getElementById('valentine-image').style.display = 'block';
+            }
+        }
+
+        function moveButton() {
+            var button = document.querySelector('.buttons button:last-child');
+            button.style.transition = "transform 0.3s ease-in-out";
+            button.style.transform = "translateX(-20px)";
+        }
+    </script>
+</body>
+</html>
